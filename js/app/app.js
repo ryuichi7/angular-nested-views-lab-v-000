@@ -1,6 +1,6 @@
 angular
     .module('app', ['ui.router'])
-    .config(function ($stateProvider) {
+    .config(function ($stateProvider, $urlRouterProvider) {
     	$stateProvider
     	.state('home', {
     		url: '/',
@@ -16,4 +16,5 @@ angular
 	    	templateUrl: 'views/home/notifications.html'
 	    });
 
+	    $urlRouterProvider.otherwise('/');
 	  });
